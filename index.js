@@ -19,6 +19,7 @@ const artists = [
     "wikipedia": "http://en.wikipedia.org/wiki/Wassily_Kandinsky",
     "paintings": 88
   },
+
   {
     "id": 2,
     "name": "Diego Rivera",
@@ -220,9 +221,10 @@ console.log('task 1.2:', artists[2]['bio'])
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-artists[8]['name'] = 'Vincent Van Gogh'
+// artists[8]['name'] = 'Vincent Van Gogh'
 
-console.log('task 2:', artists[8]['name'])
+// console.log('task 2:', artists[8]['name'])
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -248,11 +250,21 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+function get20s(array) {
+  let updatedArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const dates = array[i]['years'].split('-');
+    parseInt(dates[0])
+    parseInt(dates[1])
+    if (parseInt(dates[0]) >= 1900 && parseInt(dates[0]) <= 2000 && parseInt(dates[1]) >= 1900 && parseInt(dates[1]) <= 2000) {
+      updatedArray.push(array[i]['name'])
+    }
+  }
+  return updatedArray;
 }
 
-
+get20s(artists)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -299,10 +311,21 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  let manyPaintings = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]['paintings'] > 100) {
+      manyPaintings.push(array[i]['name']);
+    }
+  }
+  return manyPaintings;
 }
 
+
+
+// lotsOfArt(artists, 'paintings', 'name')
+
+console.log('task 7:', lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
