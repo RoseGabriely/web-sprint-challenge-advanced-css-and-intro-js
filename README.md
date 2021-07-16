@@ -23,11 +23,15 @@ Commit your code regularly and meaningfully.
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
+    Different people have different needs in order to comfortably use the web, whether thats bigger text, screen readers, different sized devices, etc. As programers it's our job to ensure their ability to use our websites by keeping accessibility in our minds as we code.
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+    One thing a programmer can do to make their website accessible is to use as many semantic elements as possible in order to communicate the order/meaning of our code to the browser/screen reader. Another thing is to always fill in the alt attribute for images. Lastly, using responsive design for various display sizes and scalable units for the ability to change font sizes.
 3. How would you explain the concept of a variable to someone new to programming?
+    Variables are used for many things such as storing data. They are similar to variables in math in terms of standing in the place of a number. In algebra x can be used in the place of a number or an equation. So x could equal 5 or 5 * y etc. The difference is, some variables in JavaScript can have their contents changed. The variable myVar could equal 5, but then later we can say var myVar = 6, and now it will equal 6. Theres different kinds of variables such as var, let and const which all work a bit differently. 
 4. What is the purpose of using functions in code?
+    Functions are an efficient way to repeat code by creating a mini program within your code. This way, if a certain process needs to be done multiple times, the function can just be called instead of writing all the code for the process again.
 5. How do you access a key inside of an object inside of an array?
-
+    To access a key you could write array[index].key or array[index]['key']
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
